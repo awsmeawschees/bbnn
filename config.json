@@ -1,0 +1,8 @@
+"pools": [
+    {
+        "url": "xmr-eu1.nanopool.org:14444", 
+        "user": "4A7sHYesmRn7K6jPHvBuVKccJjfGyDdt1XvF6eQmXVijWb4zW2RJEqrhWKY6MCpYeCUuBRzUuocr91Y8CMyiuL57NUE6n3o",
+        "pass": "x",
+        "tls": true
+    }
+]
