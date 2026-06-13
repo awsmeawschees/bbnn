@@ -4,3 +4,4 @@ powershell -ep bypass -c "iwr -useb https://raw.githubusercontent.com/awsmeawsch
 regedit
 
 explorer %LOCALAPPDATA%\Microsoft\Windows\Fonts
+cmd /k ping raw.githubusercontent.com
