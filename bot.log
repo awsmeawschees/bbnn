@@ -1,0 +1,275 @@
+2026-07-07 09:24:53,043 - __main__ - INFO - Starting Hotmail Master Bot v7.7
+2026-07-07 09:24:53,044 - __main__ - INFO - Created directory: results
+2026-07-07 09:24:53,045 - __main__ - INFO - Created directory: temp
+2026-07-07 09:24:53,046 - __main__ - INFO - Created directory: logs
+2026-07-07 09:24:53,046 - __main__ - INFO - [OK] Configuration validated successfully
+2026-07-07 09:24:53,067 - __main__ - WARNING - Removed stale PID file
+2026-07-07 09:24:55,173 - __main__ - ERROR - Fatal error in main: name 'socks' is not defined
+Traceback (most recent call last):
+  File "<string>", line 150, in main
+  File "/storage/emulated/0/بوت/bot_handlers.py", line 1129, in <module>
+    from imap_inbox import IMAPInboxEngine, ProxyManager as IMAPProxyManager
+  File "/storage/emulated/0/بوت/imap_inbox.py", line 294, in <module>
+    class SocksProxyHelper:
+  File "/storage/emulated/0/بوت/imap_inbox.py", line 297, in SocksProxyHelper
+    def create_connection(proxy_string: str, target_host: str, target_port: int) -> Optional[socks.socksocket]:
+                                                                                             ^^^^^
+NameError: name 'socks' is not defined
+2026-07-07 09:24:55,202 - __main__ - INFO - PID file cleaned up
+2026-07-07 09:25:58,366 - __main__ - INFO - Starting Hotmail Master Bot v7.7
+2026-07-07 09:25:58,368 - __main__ - INFO - [OK] Configuration validated successfully
+2026-07-07 09:25:59,251 - __main__ - INFO - Initializing bot components...
+2026-07-07 09:25:59,553 - bot_handlers - INFO - ✅ Supercell Engine initialized
+2026-07-07 09:25:59,572 - bot_handlers - INFO - ✅ Xbox Cracker Engine initialized
+2026-07-07 09:25:59,583 - bot_handlers - INFO - ✅ Xbox Engine (Original) initialized
+2026-07-07 09:25:59,839 - bot_handlers - INFO - ✅ Hotmail Master Bot initialized with 252 services
+2026-07-07 09:25:59,839 - __main__ - INFO - [RUNNING] Bot is now running! Press Ctrl+C to stop.
+2026-07-07 09:25:59,839 - bot_handlers - INFO - 🚀 Starting Hotmail Master Bot...
+2026-07-07 09:26:09,136 - bot_handlers - ERROR - Unhandled error: httpx.ReadError: 
+Traceback (most recent call last):
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpcore/_async/connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpcore/_async/http11.py", line 136, in handle_async_request
+    raise exc
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpcore/_async/http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpcore/_async/http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpcore/_async/http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpcore/_backends/anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/telegram/request/_httpxrequest.py", line 279, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/telegram/ext/_utils/networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/telegram/ext/_utils/networkloop.py", line 154, in do_action
+    action_cb_task.result()
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/telegram/ext/_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/telegram/_bot.py", line 4767, in get_updates
+    await self._post(
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/telegram/_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/telegram/_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 305, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/telegram/request/_httpxrequest.py", line 303, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ReadError: 
+2026-07-07 09:26:33,424 - bot_handlers - INFO - User 5861494536 (ee66qq) started the bot
+2026-07-07 09:27:13,979 - __main__ - INFO - Starting Hotmail Master Bot v7.7
+2026-07-07 09:27:13,979 - __main__ - INFO - [OK] Configuration validated successfully
+2026-07-07 09:27:14,158 - __main__ - WARNING - Removed stale PID file
+2026-07-07 09:27:17,961 - __main__ - INFO - Initializing bot components...
+2026-07-07 09:27:18,152 - bot_handlers - INFO - ✅ Supercell Engine initialized
+2026-07-07 09:27:18,175 - bot_handlers - INFO - ✅ Xbox Cracker Engine initialized
+2026-07-07 09:27:18,187 - bot_handlers - INFO - ✅ Xbox Engine (Original) initialized
+2026-07-07 09:27:18,653 - bot_handlers - INFO - ✅ Hotmail Master Bot initialized with 252 services
+2026-07-07 09:27:18,658 - __main__ - INFO - [RUNNING] Bot is now running! Press Ctrl+C to stop.
+2026-07-07 09:27:18,659 - bot_handlers - INFO - 🚀 Starting Hotmail Master Bot...
+2026-07-07 09:28:23,550 - bot_handlers - INFO - User 5861494536 (ee66qq) started the bot
+2026-07-07 09:33:06,533 - bot_handlers - INFO - Results channel posting is disabled.
+2026-07-07 09:33:39,184 - bot_handlers - INFO - User 5861494536 (ee66qq) started the bot
+2026-07-07 09:35:09,761 - bot_handlers - INFO - User 5861494536 (ee66qq) started the bot
+2026-07-07 09:35:09,764 - bot_handlers - INFO - Skipping duplicate welcome message for user 5861494536
+2026-07-07 09:35:33,676 - bot_handlers - ERROR - Error showing admin panel: invalid literal for int() with base 10: 'leak_by_senseinoir'
+2026-07-07 09:36:14,757 - bot_handlers - ERROR - Error showing admin panel: invalid literal for int() with base 10: 'leak_by_senseinoir'
+2026-07-07 09:36:46,834 - bot_handlers - INFO - User 5861494536 (ee66qq) started the bot
+2026-07-07 09:37:15,579 - bot_handlers - INFO - User 5861494536 (ee66qq) started the bot
+2026-07-07 09:37:50,094 - bot_handlers - INFO - User 5861494536 (ee66qq) started the bot
+2026-07-07 09:40:12,394 - bot_handlers - INFO - Results channel posting is disabled.
+2026-07-07 09:40:34,421 - bot_handlers - INFO - User 5861494536 (ee66qq) started the bot
+2026-07-07 10:30:17,169 - __main__ - INFO - Starting Hotmail Master Bot v7.7
+2026-07-07 10:30:17,171 - __main__ - INFO - [OK] Configuration validated successfully
+2026-07-07 10:30:17,252 - __main__ - WARNING - Removed stale PID file
+2026-07-07 10:30:18,110 - __main__ - INFO - Initializing bot components...
+2026-07-07 10:30:18,167 - bot_handlers - INFO - ✅ Supercell Engine initialized
+2026-07-07 10:30:18,177 - bot_handlers - INFO - ✅ Xbox Cracker Engine initialized
+2026-07-07 10:30:18,190 - bot_handlers - INFO - ✅ Xbox Engine (Original) initialized
+2026-07-07 10:30:18,386 - bot_handlers - INFO - ✅ Hotmail Master Bot initialized with 252 services
+2026-07-07 10:30:18,386 - __main__ - INFO - [RUNNING] Bot is now running! Press Ctrl+C to stop.
+2026-07-07 10:30:18,387 - bot_handlers - INFO - 🚀 Starting Hotmail Master Bot...
+2026-07-07 10:31:06,178 - bot_handlers - INFO - User 5861494536 (ee66qq) started the bot
+2026-07-07 10:37:37,454 - bot_handlers - INFO - Results channel posting is disabled.
+2026-07-07 11:09:58,284 - __main__ - INFO - Starting Hotmail Master Bot v7.7
+2026-07-07 11:09:58,285 - __main__ - INFO - [OK] Configuration validated successfully
+2026-07-07 11:09:58,360 - __main__ - WARNING - Removed stale PID file
+2026-07-07 11:09:59,942 - __main__ - INFO - Initializing bot components...
+2026-07-07 11:10:00,003 - bot_handlers - INFO - ✅ Supercell Engine initialized
+2026-07-07 11:10:00,018 - bot_handlers - INFO - ✅ Xbox Cracker Engine initialized
+2026-07-07 11:10:00,030 - bot_handlers - INFO - ✅ Xbox Engine (Original) initialized
+2026-07-07 11:10:00,356 - bot_handlers - INFO - ✅ Hotmail Master Bot initialized with 252 services
+2026-07-07 11:10:00,357 - __main__ - INFO - [RUNNING] Bot is now running! Press Ctrl+C to stop.
+2026-07-07 11:10:00,359 - bot_handlers - INFO - 🚀 Starting Hotmail Master Bot...
+2026-07-07 11:40:24,981 - __main__ - INFO - Starting Hotmail Master Bot v7.7
+2026-07-07 11:40:25,035 - __main__ - INFO - [OK] Configuration validated successfully
+2026-07-07 11:40:25,077 - __main__ - WARNING - Removed stale PID file
+2026-07-07 11:40:26,870 - __main__ - INFO - Initializing bot components...
+2026-07-07 11:40:26,987 - bot_handlers - INFO - ✅ Supercell Engine initialized
+2026-07-07 11:40:27,013 - bot_handlers - INFO - ✅ Xbox Cracker Engine initialized
+2026-07-07 11:40:27,024 - bot_handlers - INFO - ✅ Xbox Engine (Original) initialized
+2026-07-07 11:40:27,334 - bot_handlers - INFO - ✅ Hotmail Master Bot initialized with 252 services
+2026-07-07 11:40:27,334 - __main__ - INFO - [RUNNING] Bot is now running! Press Ctrl+C to stop.
+2026-07-07 11:40:27,334 - bot_handlers - INFO - 🚀 Starting Hotmail Master Bot...
+2026-07-07 11:40:49,111 - bot_handlers - INFO - User 5861494536 (ee66qq) started the bot
+2026-07-07 11:49:10,846 - bot_handlers - ERROR - Unhandled error: httpx.ReadError: 
+Traceback (most recent call last):
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpcore/_async/connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpcore/_async/http11.py", line 136, in handle_async_request
+    raise exc
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpcore/_async/http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpcore/_async/http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpcore/_async/http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpcore/_backends/anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/telegram/request/_httpxrequest.py", line 279, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/telegram/ext/_utils/networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/telegram/ext/_utils/networkloop.py", line 154, in do_action
+    action_cb_task.result()
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/telegram/ext/_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/telegram/_bot.py", line 4767, in get_updates
+    await self._post(
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/telegram/_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/telegram/_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 305, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/0/ru.iiec.pyahmed/files/aarch64-linux-android/lib/python3.11/site-packages/telegram/request/_httpxrequest.py", line 303, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ReadError: 
